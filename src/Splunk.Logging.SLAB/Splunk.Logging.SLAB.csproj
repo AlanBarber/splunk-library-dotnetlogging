@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Splunk.Logging</RootNamespace>
     <AssemblyName>Splunk.Logging.SLAB</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -59,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Splunk.Logging.Common\Splunk.Logging.Common.csproj">
-      <Project>{b776a5c5-a301-472e-9d21-a62306358b2c}</Project>
+      <Project>{493fb7c9-aef4-4824-b654-964b088bb43f}</Project>
       <Name>Splunk.Logging.Common</Name>
     </ProjectReference>
   </ItemGroup>

@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Threading.Tasks;
 
 namespace Splunk.Logging
 {
@@ -23,11 +24,12 @@ namespace Splunk.Logging
             }
 
             // Otherwise, use DNS lookup to get at least one IP address.
-            IPHostEntry addresses = Dns.GetHostEntry(hostname);
-            if (addresses.AddressList.Count() < 1)
+            Task<IPHostEntry> taskGetHostEntryAsync = Dns.GetHostEntryAsync(hostname);
+            if (taskGetHostEntryAsync?.Result?.AddressList == null || !taskGetHostEntryAsync.Result.AddressList.Any())
+            {
                 throw new Exception(string.Format("No IP address corresponding to hostname {0} found.", hostname));
-            else
-                return addresses.AddressList[0];
+            }
+            return taskGetHostEntryAsync.Result.AddressList[0];
         }
 
         public static Socket OpenUdpSocket(IPAddress host, int port)

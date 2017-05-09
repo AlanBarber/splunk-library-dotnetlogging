@@ -167,7 +167,6 @@ namespace Splunk.Logging
                 {
                     if (socket != null)
                     {
-                        socket.Close();
                         socket.Dispose();
                     }
 

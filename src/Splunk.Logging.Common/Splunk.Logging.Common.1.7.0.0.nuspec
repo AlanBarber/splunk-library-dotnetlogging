@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Splunk.Logging.Common</id>
+        <version>1.7.0.0</version>
+        <title>(BE Internal) Splunk Logging for .NET - Common Components</title>
+        <authors>Bob Evans</authors>
+        <owners>Bob Evans</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Custom internal .Net Standard 1.3 compatible version of Splunk.Logging.Common. 
+Note that the current version 1.6.1.0 on nuget is not .Net Standard compatible 
+so using the open source code from https://github.com/splunk/splunk-library-dotnetlogging we have modified the library to support .Net Standard 1.3.</description>
+        <copyright>Copyright 2015</copyright>
+        <language>en-US</language>
+        <tags>Splunk</tags>
+    </metadata>
+    <files>
+        <file src="bin\Release\Splunk.Logging.Common.dll" target="lib\netstandard1.3\Splunk.Logging.Common.dll" />
+    </files>
+</package>
